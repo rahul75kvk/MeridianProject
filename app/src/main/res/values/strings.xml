@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Meridian Project</string>
+    <string name="password_warning">Password MustContain 8 Letters</string>
+</resources>

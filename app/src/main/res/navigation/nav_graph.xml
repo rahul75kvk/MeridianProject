@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.meridianproject.common.login.view.Login"
+        android:label="Login" >
+
+        <action
+            android:id="@+id/action_login_to_UserDtails"
+            app:destination="@id/UserDtails" />
+
+        <action
+            android:id="@+id/action_login_to_Signup"
+            app:destination="@id/signup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signup"
+        android:name="com.example.meridianproject.common.signup.view.Signup"
+        android:label="Signup" >
+
+        <action
+            android:id="@+id/action_signup_to_login"
+            app:destination="@id/login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/UserDtails"
+        android:name="com.example.meridianproject.common.userdetails.view.UserDetails"
+        android:label="UserDetails" >
+
+    </fragment>
+
+
+
+</navigation>
