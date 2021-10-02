@@ -11,8 +11,7 @@
         android:id="@+id/img_View"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo"
-        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,14 +22,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/sign_up"
-        android:textSize="25sp"
+        android:textSize="22sp"
         android:textColor="@color/black"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="start"
-        app:layout_constraintTop_toBottomOf="@id/img_View"
+        app:layout_constraintBottom_toTopOf="@id/llUserName"
         android:layout_marginLeft="32dp" />
 
 
@@ -39,20 +38,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginEnd="25dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_Login"
+        app:layout_constraintBottom_toTopOf="@id/llUserEmail"
         app:boxStrokeColor="@color/black">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/tv_Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
-            android:textStyle="bold"
             android:inputType="textPersonName"
             android:textColor="@color/black"
             />
@@ -64,20 +62,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginEnd="25dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llUserName"
+        app:layout_constraintBottom_toTopOf="@id/llUserPassword"
         app:boxStrokeColor="@color/black">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/tv_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:textStyle="bold"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"
             />
@@ -89,20 +86,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginEnd="25dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llUserEmail"
+        app:layout_constraintBottom_toTopOf="@id/llConfirmPassword"
         app:boxStrokeColor="@color/black">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/tv_Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:textStyle="bold"
             android:inputType="textVisiblePassword"
             android:textColor="@color/black"
             />
@@ -114,20 +110,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="25dp"
+        android:layout_marginBottom="15dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llUserPassword"
+        app:layout_constraintBottom_toTopOf="@id/btn_Signup"
         app:boxStrokeColor="@color/black">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/tv_ConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/confirm_password"
-            android:textStyle="bold"
             android:inputType="textPassword"
             android:textColor="@color/black"
             />
@@ -139,7 +134,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/ic_button_with_black_border"
         android:text="Sign up"
@@ -150,7 +145,7 @@
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llConfirmPassword" />
+        app:layout_constraintBottom_toTopOf="@id/tv_login" />
 
     <TextView
         android:id="@+id/tv_login"

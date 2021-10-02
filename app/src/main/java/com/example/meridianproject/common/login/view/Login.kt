@@ -33,13 +33,6 @@ class Login : BaseFragment(), View.OnClickListener {
         setupViewModel()
 
     }
-
-    private fun setupViewModel() {
-       viewModel = ViewModelProvider(this, ViewModelFactory()).get(LoginViewModel::class.java)
-
-    }
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -65,7 +58,10 @@ class Login : BaseFragment(), View.OnClickListener {
         prefmanager = PrefManager(requireContext())
 
     }
+    private fun setupViewModel() {
+        viewModel = ViewModelProvider(this, ViewModelFactory()).get(LoginViewModel::class.java)
 
+    }
     override fun onClick(v: View?) {
 
         val id = v?.id
@@ -78,7 +74,6 @@ class Login : BaseFragment(), View.OnClickListener {
 
             R.id.btn_Login ->{
 
-
                 val response: String = viewModel.ValidateLogin(
                         requireActivity() as BaseActivity,
                         username.text.toString().trim(),
@@ -87,12 +82,11 @@ class Login : BaseFragment(), View.OnClickListener {
 
                 if (response.equals("")) {
 
-                    if (username.equals(prefmanager.checkEmail)||password.equals(prefmanager.checkPassword))
+                    if (username.text.toString().equals(prefmanager.checkEmail)||password.text.toString().equals(prefmanager.checkPassword)) {
 
-                    {
-                        Navigation.findNavController(rootView).navigate(R.id.action_login_to_UserDtails)
-
-                    }else{
+                        Navigation.findNavController(rootView)
+                            .navigate(R.id.action_login_to_UserDtails)
+                    } else{
 
                         showToast("Please Signup")
                         Navigation.findNavController(rootView).navigate(R.id.action_login_to_Signup)
@@ -100,9 +94,6 @@ class Login : BaseFragment(), View.OnClickListener {
                 } else {
                     showToast(response)
                 }
-
-
-
 
 
             }

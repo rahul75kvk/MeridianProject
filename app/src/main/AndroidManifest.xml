@@ -11,8 +11,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MeridianProject">
-        <activity android:name=".base.BaseActivity">
+        android:theme="@style/Theme.MeridianProject"
+        android:screenOrientation="portrait"
+        android:fitsSystemWindows="true">
+        <activity android:name=".base.BaseActivity"
+            android:screenOrientation="portrait"
+            android:fitsSystemWindows="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

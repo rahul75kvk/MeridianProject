@@ -90,28 +90,23 @@ class Signup:BaseFragment(), View.OnClickListener {
 
                 val response: String = signupViewModel.ValidateSignup(
                         requireActivity() as BaseActivity,
-                         userEmail.text.toString().trim(),
-                                 passWord.text.toString().trim()
+                        userName.text.toString().trim(),
+                        userEmail.text.toString().trim(),
+                        confirmPassword.text.toString().trim(),
+                        passWord.text.toString().trim()
                 )
 
-                if (response.equals("")) {
-                    prefmanager.checkName =userEmail.toString()
+                if (response.equals("")){
 
-                    if (confirmPassword.equals(passWord)) {
+                        prefmanager.checkPassword =  passWord.text.toString().trim()
+                        prefmanager.checkEmail = userEmail.text.toString().trim()
 
-                        prefmanager.checkEmail = userEmail.toString()
+                        Navigation.findNavController(rootView).navigate(R.id.action_signup_to_login)
 
-                    }
-                    else{
-                        showToast(" please confirm Your password")
-                    }
+                 }   else {
+            showToast(response)
 
-                    Navigation.findNavController(rootView).navigate(R.id.action_signup_to_login)
-
-                } else {
-                    showToast(response)
                 }
-
             }
 
 

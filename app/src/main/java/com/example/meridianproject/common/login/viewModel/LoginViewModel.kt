@@ -10,14 +10,14 @@ class LoginViewModel :ViewModel () {
 
     fun ValidateLogin(
             context: Context,
-            passWord:String,
-            userEmail:String
+            userEmail :String,
+            passWord:String
 
     ): String {
         var Valu: String = ""
-        if (userEmail?.length == 0) {
+        if (userEmail.length == 0) {
             Valu = "Please enter registered email"
-        } else if (passWord?.length == 0) {
+        } else if (passWord.length == 0) {
             Valu = "Please enter a password"
         }else if (!Validator.isValidPasswordFormat(passWord)) {
             Valu = context.getString(R.string.password_warning)

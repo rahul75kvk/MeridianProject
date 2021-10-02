@@ -35,7 +35,11 @@ class UserListAdapter  (val posts:ArrayList<UserDetailslist>): RecyclerView.Adap
                     .transform(PicassoCircleTransformation())
                     .into(holder.iv_Img)
 
+    }
 
+    fun addList(data: ArrayList<UserDetailslist>) {
+        posts.addAll(data)
+        notifyDataSetChanged()
     }
 
     class ViewHolder(itemView: View, adapter:UserListAdapter) : RecyclerView.ViewHolder(itemView) {

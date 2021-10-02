@@ -11,15 +11,23 @@ class SignupViewModel:ViewModel() {
 
     fun ValidateSignup(
             context: Context,
-            passWord:String,
-            userEmail:String
+            userName:String,
+            userEmail:String,
+            confirmPassword:String,
+            passWord:String
 
     ): String {
         var Valu: String = ""
-        if (userEmail?.length == 0) {
-            Valu = "Please enter registered email"
-        } else if (passWord?.length == 0) {
-            Valu = "Please enter a password"
+        if  (userName.isNullOrEmpty()) {
+            Valu = "Please enter your Name !"
+        }else if (userEmail.isNullOrEmpty()) {
+                Valu = "Please Enter Email !"
+        }else if (confirmPassword.isNullOrEmpty()) {
+            Valu = "Please Enter ConfirmPassword !"
+        }else if (passWord.isNullOrEmpty()) {
+            Valu = "Please Enter Password !"
+        }else if (passWord !=confirmPassword) {
+            Valu = "Please Confirm Password!"
         }else if (!Validator.isValidPasswordFormat(passWord)) {
             Valu = context.getString(R.string.password_warning)
         }
