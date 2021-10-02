@@ -12,12 +12,11 @@
         android:id="@+id/img_View"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/logo"
         android:layout_marginTop="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_Login"
@@ -107,7 +106,7 @@
         android:id="@+id/tv_forgot"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Forgot Password ?"
+        android:text="@string/forgot_password"
         android:textSize="17sp"
         android:textColor="@color/purple_700"
         android:clickable="true"
@@ -124,7 +123,7 @@
         android:id="@+id/tv_Signup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Don`t have an account? Sign-up"
+        android:text="@string/don_t_have_an_account_sign_up"
         android:textSize="15sp"
         android:textColor="@color/purple_700"
         android:clickable="true"
